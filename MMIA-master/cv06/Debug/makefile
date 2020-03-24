@@ -40,8 +40,8 @@ cv06.bin \
 all: cv06.elf secondary-outputs
 
 # Tool invocations
-cv06.elf: $(OBJS) $(USER_OBJS) C:\Users\Kristian\Documents\Skola\MMIA-master\cv04\ ad\ prevodnik\STM32F030R8TX_FLASH.ld
-	arm-none-eabi-gcc -o "cv06.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0 -T"C:\Users\Kristian\Documents\Skola\MMIA-master\cv04 ad prevodnik\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv06.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+cv06.elf: $(OBJS) $(USER_OBJS) C:\Users\Kristian\Documents\Skola\MMIA-master\cv06\STM32F030R8TX_FLASH.ld
+	arm-none-eabi-gcc -o "cv06.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0 -T"C:\Users\Kristian\Documents\Skola\MMIA-master\cv06\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv06.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
